@@ -1,2 +1,4 @@
 # Dashboard
-Dashboard on Vue.js
+Dashboard on React.js + typescript
+
+(It's my first project with this stack)
