@@ -1,4 +1,4 @@
 # Dashboard
-Dashboard on React.js + typescript
+Dashboard on React/Redux
 
 (It's my first project with this stack)
