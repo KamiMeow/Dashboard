@@ -1,0 +1,16 @@
+.form__actions {
+  padding: 1.3em 0em;
+}
+
+.form__actions--end {
+  display: flex;
+  justify-content: flex-end;
+}
+.form__actions--center {
+  display: flex;
+  justify-content: center;
+}
+.form__actions--start {
+  display: flex;
+  justify-content: flex-start;
+}

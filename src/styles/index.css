@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: "Raleway";
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+
+.form__input {
+  padding: 1em 0;
+}
+
+.font-weight-thin {
+  font-family: "Raleway";
+  font-weight: 100;
+}
+.font-weight-light {
+  font-family: "Raleway";
+  font-weight: 300;
+}
+.font-weight-regular {
+  font-family: "Raleway";
+  font-weight: 500;
+}
+.font-weight-medium {
+  font-family: "Raleway";
+  font-weight: 600;
+}
+.font-weight-bold {
+  font-family: "Raleway";
+  font-weight: 700;
+}
+.font-weight-extra-bold {
+  font-family: "Raleway";
+  font-weight: 800;
+}
