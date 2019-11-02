@@ -1,0 +1,16 @@
+.card {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.07) !important;
+}
+
+.card__content {
+  padding: 1em;
+}
+
+.card__title,
+.card__children {
+  padding: 0.3em 1em 0.7em 1em;
+}
+
+.card__title {
+  font-size: 25px;
+}

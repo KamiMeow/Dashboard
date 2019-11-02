@@ -1,0 +1,12 @@
+.container,
+.container__content {
+  width: 100%;
+  display: flex;
+}
+
+.container__content {
+  padding: 4em;
+}
+.container__content > div {
+  height: auto;
+}

@@ -1,0 +1,15 @@
+a.button {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: #34495e;
+  box-shadow: 0 -3px #7e96af inset;
+  transition: 0.2s;
+} 
+a.button:hover { background: #6f8aa7 }
+a.button:active {
+  background: #7e96af;
+  box-shadow: 0 3px #7e96af inset;
+}
