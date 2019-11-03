@@ -1,10 +1,16 @@
-export const login = (data = { nickname: '', login: '' }, token) => {
-  console.log(data);
+import AuthService from '../middleware/services/AuthService';
+
+export const login = async (data = { password: '', login: '' }) => {
+  const user = await AuthService.login({
+    password: data.password,
+    login: data.login,
+  });
+
   return ({
     type: 'LOGIN',
-    token,
-    data,
-  })
+    token: user.token,
+    data: user,
+  });
 };
 
 export const logout = () => ({
