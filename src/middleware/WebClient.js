@@ -36,5 +36,4 @@ class WebClient {
   }
 };
 
-const webClient = new WebClient(process.env.API_URL);
-export default webClient;
+export default WebClient;
