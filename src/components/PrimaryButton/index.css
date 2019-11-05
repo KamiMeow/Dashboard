@@ -1,4 +1,4 @@
-a.button {
+button.button {
   font-weight: 700;
   color: white;
   text-decoration: none;
@@ -7,9 +7,12 @@ a.button {
   background: #34495e;
   box-shadow: 0 -3px #7e96af inset;
   transition: 0.2s;
+  cursor: pointer;
+  border-width: 0;
 } 
-a.button:hover { background: #6f8aa7 }
-a.button:active {
+button.button:hover { background: #6f8aa7 }
+button.button:focus { outline: 0 }
+button.button:active {
   background: #7e96af;
   box-shadow: 0 3px #7e96af inset;
 }

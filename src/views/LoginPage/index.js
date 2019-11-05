@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import PrimaryButton from '../../components/PrimaryButton';
+import ErrorMessage from '../../components/ErrorMessage';
 import Container from '../../components/Container';
 import Card from '../../components/Card';
 
@@ -19,12 +20,14 @@ class LoginPage extends React.Component {
       password: '',
       nickname: '',
       login: '',
+      error: '',
 
       isAuth: true,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleError = this.handleError.bind(this);
   }
 
   async handleSubmit(e) {
@@ -45,7 +48,9 @@ class LoginPage extends React.Component {
     });
   }
   handleError(error) {
-    console.log(error);
+    this.setState({
+      error: error,
+    });
   }
 
   render() {
@@ -54,6 +59,7 @@ class LoginPage extends React.Component {
       nickname,
       isAuth,
       login,
+      error,
     } = this.state;
     let title, form;
 
@@ -93,6 +99,8 @@ class LoginPage extends React.Component {
               <PrimaryButton text="Авторизация" type="submit" />
             </div>
           </form>
+
+          <ErrorMessage error={error} border="left" />
         </Card>
       </Container>
     );
