@@ -29,8 +29,13 @@ class LoginPage extends React.Component {
 
   async handleSubmit(e) {
     e.preventDefault();
+
     const data = await actions.login(this.state);
-    this.props.dispatch(data);
+
+    if (data.type === 'ERROR') {
+      this.handleError(data.message);
+    }
+    else this.props.dispatch(data);
   }
   handleChange(e) {
     const target = e.target;
@@ -38,6 +43,9 @@ class LoginPage extends React.Component {
     this.setState({
       [target.name]: target.value,
     });
+  }
+  handleError(error) {
+    console.log(error);
   }
 
   render() {

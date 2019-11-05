@@ -5,13 +5,19 @@ class AuthService extends Service {
     super();
   }
 
-  async login({ login, password }) {
-    const data = await this.webClient.post('/login', {
-      email: login,
-      password,
+  login({ login, password }) {
+    return new Promise(res => {
+      this.webClient.post('/login', {
+        email: login,
+        password,
+      })
+        .then(response => {
+          res(this.newError(response.data.user));
+        })
+        .catch(err => {
+          res(this.newError(err, true));
+        })
     });
-
-    return data.data.user;
   }
 };
 

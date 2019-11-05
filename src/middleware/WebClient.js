@@ -9,6 +9,15 @@ class WebClient {
       },
       withCredentials: true,
     });
+
+    this.setInterceptors();
+  }
+
+  setInterceptors() {
+    this.axios.interceptors.response.use(null, error => {
+      const errorText = error.response.data.error;
+      return Promise.reject(errorText);
+    });
   }
 
   setHeader({ name, value }) {

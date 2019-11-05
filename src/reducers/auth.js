@@ -4,6 +4,7 @@ import User from '../models/User';
 const auth = (state = { user: {}, isAuth: false}, action) => {
   switch(action.type) {
     case 'LOGIN': {
+      console.log(action);
       const newUser = new User(action.data);
       state.user = newUser;
       state.isAuth = true;

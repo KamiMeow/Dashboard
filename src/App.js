@@ -17,6 +17,7 @@ const App = () => (
   <Provider store={store}>
     <div className="app">
       <Route path="/login" component={LoginPage} />
+
       <PrivateRoute path="/protected" component={template} />
 
       {/* <Route path="*">

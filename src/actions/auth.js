@@ -1,10 +1,13 @@
 import AuthService from '../middleware/services/AuthService';
+import { setError } from './error';
 
 export const login = async (data = { password: '', login: '' }) => {
-  const user = await AuthService.login({
+  const { error, data: user } = await AuthService.login({
     password: data.password,
     login: data.login,
   });
+
+  if (error) return setError({ error: user });
 
   return ({
     type: 'LOGIN',
@@ -17,12 +20,7 @@ export const logout = () => ({
   type: 'LOGOUT',
 });
 
-export const isAuth = () => ({
-  type: 'GET_IS_AUTH',
-});
-
 export default {
   login,
   logout,
-  isAuth,
 }
