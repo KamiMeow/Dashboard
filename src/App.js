@@ -1,30 +1,26 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import initialStore from './store/initialStore';
-import initStore from './store/initStore';
-import PrivateRoute from './components/PrivateRoute';
-import LoginPage from './views/LoginPage';
-import './styles/App.css';
+import logo from './logo.svg';
+import './App.css';
 
-const store = initStore(initialStore);
-
-const template = () => (
-  <div>protect</div>
-);
-
-const App = () => (
-  <Provider store={store}>
-    <div className="app">
-      <Route path="/login" component={LoginPage} />
-
-      <PrivateRoute path="/protected" component={template} />
-
-      {/* <Route path="*">
-        <Redirect to="/fuck" />
-      </Route> */}
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
-  </Provider>
-);
+  );
+}
 
 export default App;
