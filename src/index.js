@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 
-import './styles/index.scss';
+import '@styles/index.scss';
 import App from './App';
 
 const history = createBrowserHistory()

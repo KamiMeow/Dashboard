@@ -1,11 +1,9 @@
 import React from 'react';
-
-
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Main from './components/Layout/Main';
 
-import './styles/App.css';
+import '@styles/App.css';
 
 function App() {
   return (
