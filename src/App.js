@@ -1,24 +1,17 @@
 import React from 'react';
-import Header from './components/Header';
+
+import Header from './components/Layout/Header';
+import Footer from './components/Layout/Footer';
+import Main from './components/Layout/Main';
+
 import './styles/App.css';
 
 function App() {
   return (
     <div className="App">
-      <Header className="App-header" >
-        MAKE MEME GREAT
-      </Header>
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+      <Header className="App-header" />
+      <Main/>
+			<Footer/>
     </div>
   );
 }
