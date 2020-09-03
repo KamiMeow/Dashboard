@@ -50,6 +50,7 @@ module.exports = {
   scopes: [
     { name: "components" },
     { name: "tutorial" },
+    { name: "styles" },
     { name: "project configuration" },
   ],
 
