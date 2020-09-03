@@ -1,3 +1,7 @@
+@import './variables.scss';
+@import './typography.scss';
+@import './raleway.css';
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,7 +9,7 @@
 
 body {
   margin: 0;
-  font-family: "Raleway";
+  font-family: $main-font-family;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,7 +19,7 @@ body,
 html,
 #root {
   height: 100vh;
-  font-family: "Raleway";
+  font-family: $main-font-family;
 }
 
 code {
@@ -45,29 +49,4 @@ code {
 
 .form__input {
   padding: 1em 0;
-}
-
-.font-weight-thin {
-  font-family: "Raleway";
-  font-weight: 100;
-}
-.font-weight-light {
-  font-family: "Raleway";
-  font-weight: 300;
-}
-.font-weight-regular {
-  font-family: "Raleway";
-  font-weight: 500;
-}
-.font-weight-medium {
-  font-family: "Raleway";
-  font-weight: 600;
-}
-.font-weight-bold {
-  font-family: "Raleway";
-  font-weight: 700;
-}
-.font-weight-extra-bold {
-  font-family: "Raleway";
-  font-weight: 800;
 }
