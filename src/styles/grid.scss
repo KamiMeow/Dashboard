@@ -1,0 +1,35 @@
+@import './variables.scss';
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat($grid-column-count, 1fr);
+}
+
+.col-2 {
+  column-span: 2;
+}
+
+/* Flex */
+.layout {
+  display: flex;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
