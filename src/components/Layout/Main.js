@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
-import Home from '../../views/Home';
-import About from '../../views/About';
+import routes from '@/router';
 
 function Main(props) {
-	const { history } = props
 
+	const { history } = props;
 	return (
 		<div>
-			<Switch>
-				<Route history={history} path="/" component={Home}/>
-				<Route history={history} path="/about" component={About}/>
-			</Switch>
+				<Suspense fallback={<div> Загрузка </div>}>
+					<Switch>
+							{
+								routes.map(route => (
+									<Route
+										key={ route.route }
+										history={ history }
+										component={ route.component }
+										exact={ route.isExact }
+										path={ route.route }
+									/>
+								))
+							}
+					</Switch>
+				</Suspense>
 		</div>
 	);
 };
